@@ -523,7 +523,8 @@
                 <template x-for="(field, index) in fields" :key="index">
                   <tr>
                     <td x-text="index + 1"></td>
-                    <td><input x-model="field.txt1" type="textarea" name="txt1[]" class="form-control">
+                    <td>
+                      <textarea x-model="field.txt1" name="txt1[]" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </td>
                     
 
