@@ -35,6 +35,8 @@
 
   <script src="https://kit.fontawesome.com/a38fa16313.js" crossorigin="anonymous" defer></script>
 
+  
+
   <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
   
@@ -43,11 +45,17 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <!-- alphine js  -->
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   
   <!-- own javascript links -->
   <script src="js/jquery.magnific-popup.js" defer></script>
   <script src="js/add-recipe.js" defer></script>
   <script src="js/magnific.js" defer></script>
+  <script src="js/add-ingredients.js" ></script>
+  
   
 
 </head>
@@ -433,9 +441,60 @@
                 </div>
             </div>
         </div>
+        </div> <!--gallery image ends-->
+
+        <div class="col-md-12 col-12">
+          <div class="form-group mb-4">
+              <label>Description <small class="text-danger">*</small></label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+      </div> <!-- Descript ends here -->
+
+      <!-- add ingredients -->
+      <div class="row" x-data="handler()">
+        <div class="col">
+        <table class="table table-bordered align-items-center table-sm">
+          <h6>Add Ingredients</h6>
+          <thead class="thead-light">
+           <tr>
+             <th>#</th>
+             <th>Ingredient Name</th>      
+             <th>Value</th>
+             <th>Unit</th>
+             <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="(field, index) in fields" :key="index">
+             <tr>
+              <td x-text="index + 1"></td>
+              <td><input x-model="field.txt1" type="text" name="txt1[]" class="form-control">
+              </td>
+              <td><input x-model="field.txt2" type="text" name="txt2[]" class="form-control"></td>
+               <td>
+                <!-- <input x-model="field.txt3" type="text" name="txt3[]" class="form-control"> -->
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select the Cuisine Name</option>
+                  <option value="1">gram</option>
+                  <option value="2">kilo</option>
+                  <option value="3">kcal</option>
+                </select>
+                </td>
+               
+               <td><button type="button" class="btn btn-danger btn-small" @click="removeField(index)">&times;</button></td>
+            </tr>
+           </template>
+          </tbody>
+          <tfoot>
+             <tr>
+               <td colspan="4" class="text-left"><button type="button" class="btn btn-primary" @click="addNewField()">+ Add Ingredients</button></td>
+            </tr>
+          </tfoot>
+        </table>
+        </div>
         </div>
 
-      </div>
+      </div>  
 
       <!-- button -->
       <div class="row"></div>
@@ -445,8 +504,6 @@
 
     </form>
   </div>
-
-  
 
   
   </body>
