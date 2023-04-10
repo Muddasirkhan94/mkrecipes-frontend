@@ -35,6 +35,10 @@
 
   <script src="https://kit.fontawesome.com/a38fa16313.js" crossorigin="anonymous" defer></script>
 
+  <!-- alphine js  -->
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
   <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
   
@@ -48,6 +52,7 @@
   <script src="js/jquery.magnific-popup.js" defer></script>
   <script src="js/add-recipe.js" defer></script>
   <script src="js/magnific.js" defer></script>
+  <script src="js/add-ingredients.js"></script>
   
 
 </head>
@@ -96,13 +101,8 @@
                       Recipes
                     </a>
                     <ul class="dropdown-menu fs-6">
-                      <li><a class="dropdown-item" href="#">Soup</a></li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Salad</a>
-                      </li>
+                      <li><a class="dropdown-item" href="single-category.html">Salad</a></li>
+                      
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
@@ -149,36 +149,36 @@
                       Cuisine
                     </a>
                     <ul class="dropdown-menu fs-6">
-                      <li><a class="dropdown-item" href="#">Soup</a></li>
+                      <li><a class="dropdown-item" href="single-cuisine.html">Pakistani</a></li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Salad</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Fast Food</a>
+                        <a class="dropdown-item" href="#">Turkish</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Fish</a>
+                        <a class="dropdown-item" href="#">Indian</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Pizza</a>
+                        <a class="dropdown-item" href="#">Italien</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Deserts</a>
+                        <a class="dropdown-item" href="#">Chinese</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Lebenese</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
@@ -232,7 +232,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body bg-light">
-            <form class=" active d-flex mt-3 mt-lg-0" role="search">
+            <form action="search.html" method="GET" class=" active d-flex mt-3 mt-lg-0" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-outline-success" type="submit">
                 Search
@@ -245,18 +245,19 @@
   </header>
   <!-- header end  -->
 
-
+<!-- breadcrum page header -->
   <div class="page-header">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Categories</h2>
+                <h2>Search : "Search"</h2>
             </div>
             <div class="col-12">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Categories</li>
+                        <li class="breadcrumb-item active" aria-current="page">Search</li>
+                        
                     </ol>
                 </nav>
             </div>
@@ -266,160 +267,6 @@
 </div>
 
 
-<!-- Categories -->
-
-<div class="container ">
-  <div class="col-12 text-center mb-4 mt-4">
-    <h3>Categories</h3>
-  </div>
-
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gx-5 g-3">
-
-    <!-- 1st category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/salat.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center"><a href="">Salat</a></h4>
-            <hr class="hr-divider" />
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 2nd category  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 3rd category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 4th category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 5th category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- 6th category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 7th category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 8th category   -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </div>
+<div class="container">
+    <div class="d-flex justify-content-center mt-5"><h5>No Recipes Found</h5></div>
 </div>
-</div>
-

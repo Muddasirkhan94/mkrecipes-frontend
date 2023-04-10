@@ -35,6 +35,10 @@
 
   <script src="https://kit.fontawesome.com/a38fa16313.js" crossorigin="anonymous" defer></script>
 
+  <!-- alphine js  -->
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
   <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
   
@@ -48,6 +52,7 @@
   <script src="js/jquery.magnific-popup.js" defer></script>
   <script src="js/add-recipe.js" defer></script>
   <script src="js/magnific.js" defer></script>
+  <script src="js/add-ingredients.js"></script>
   
 
 </head>
@@ -96,13 +101,8 @@
                       Recipes
                     </a>
                     <ul class="dropdown-menu fs-6">
-                      <li><a class="dropdown-item" href="#">Soup</a></li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Salad</a>
-                      </li>
+                      <li><a class="dropdown-item" href="single-category.html">Salad</a></li>
+                      
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
@@ -149,36 +149,36 @@
                       Cuisine
                     </a>
                     <ul class="dropdown-menu fs-6">
-                      <li><a class="dropdown-item" href="#">Soup</a></li>
+                      <li><a class="dropdown-item" href="single-cuisine.html">Pakistani</a></li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Salad</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Fast Food</a>
+                        <a class="dropdown-item" href="#">Turkish</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Fish</a>
+                        <a class="dropdown-item" href="#">Indian</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Pizza</a>
+                        <a class="dropdown-item" href="#">Italien</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Deserts</a>
+                        <a class="dropdown-item" href="#">Chinese</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Lebenese</a>
                       </li>
                       <li>
                         <hr class="dropdown-divider" />
@@ -232,7 +232,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body bg-light">
-            <form class=" active d-flex mt-3 mt-lg-0" role="search">
+            <form action="search.html" method="GET" class=" active d-flex mt-3 mt-lg-0" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-outline-success" type="submit">
                 Search
@@ -245,18 +245,19 @@
   </header>
   <!-- header end  -->
 
-
+<!-- breadcrum page header -->
   <div class="page-header">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Cuisines</h2>
+                <h2>Cuisine : Pakistan</h2>
             </div>
             <div class="col-12">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cuisines</li>
+                        <li class="breadcrumb-item active" aria-current="page">Pakistan</li>
+                        
                     </ol>
                 </nav>
             </div>
@@ -266,195 +267,190 @@
 </div>
 
 
-<!-- Cuisines -->
+<!-- all Cusinine starts here -->
+  <div class="container mt-4">
 
-<div class="container ">
-  <div class="col-12 text-center mb-4 mt-4">
-    <h3>All Cuisines</h3>
-  </div>
-
-  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 gx-5 g-3">
-
-    <!-- 1st Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/pk.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center text-dark"><a href="">Pakistani</a></h4>
-            <hr class="hr-divider" />
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 2nd Cuisine -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/it.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Italien</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 3rd Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/cn.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Chinese</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 4th Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/in.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Indian</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 5th Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/tr.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Turkish</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- 6th Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/lb.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Lebnese</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 7th Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/pk.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Pakistani</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 8th Cuisine  -->
-    <div class="col-md-4">
-      <div class="fav-recipe-grid">
-        <div class="recipe-img "><img src="images/Cuisine-flag/tr.png" alt=""></div>
-        <div class="recipe-content d-flex flex-column">
-          <div class="mt-auto">
-            <h4 class="fs-1 d-flex justify-content-center "><a href="">Turkish</a></h4>
-            <hr class="hr-divider" />
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-    <!-- 9th Cuisine  -->
-    <div class="col-md-4">
-        <div class="fav-recipe-grid">
-          <div class="recipe-img "><img src="images/Cuisine-flag/pk.png" alt=""></div>
-          <div class="recipe-content d-flex flex-column">
-            <div class="mt-auto">
-              <h4 class="fs-1 d-flex justify-content-center "><a href="">Pakistani</a></h4>
-              <hr class="hr-divider" />
-              
-              
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 ">
+        <div class="col ">
+          <!-- 1st recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
+  
+              </ul>
             </div>
           </div>
   
-  
         </div>
+        <div class="col">
+          <!-- 2nd recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
   
-      </div>
-
-      <!-- 10th Cuisine  -->
-    <div class="col-md-4">
-        <div class="fav-recipe-grid">
-          <div class="recipe-img "><img src="images/Cuisine-flag/pk.png" alt=""></div>
-          <div class="recipe-content d-flex flex-column">
-            <div class="mt-auto">
-              <h4 class="fs-1 d-flex justify-content-center "><a href="">Pakistani</a></h4>
-              <hr class="hr-divider" />
-              
-              
+              </ul>
             </div>
           </div>
-  
-  
         </div>
+        <div class="col">
+          <!-- 3rd recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
   
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- 4th recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- 5th recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- 6th recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- 7th recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- 8th recipe in latest recipes  -->
+          <div class="recipe-grid">
+            <div class="recipe-photo"><img src="images/recipe-photo/recipe-photo-1.jpg"
+                alt=""></div>
+            <div class="mx-3">
+              <h5 class=" mt-4  recipe-content"><a href="recipe.html">Beef Curry with Beans easy Recipes</a> </h5>
+              <ul class="d-flex justify-content-start r-content-subtite">
+                <li><i class="far fa-clock"></i> 35 Mins |</li>
+                <li class="mx-1"> Easy |</li>
+                <li><a class="link-hover" href="">Beef</a> </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
+
+
   </div>
-</div>
-</div>
+
+  <!-- footer starts -->
+
+  <footer>
+    <div class="container-fluid footer-logobar mb-3">
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="#" ><img class="footer-logo img-fluid" src="images/logo.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid"> 
+      <div class="row d-flex ">
+        <div class="col-md-4 col-12 align-self-center text-md-left text-center mb-2 mb-md-0">
+          <p class="copyright-text">Copyright © 2022-2023. Allrights reserved.</p>
+        </div>
+        <div class="d-flex justify-content-center col-md-4 col-12  mb-2 mb-md-0" >
+          <div class="icon-nav">
+            <ul>
+              <li>
+                <a href="#"> <i class="fab fa-facebook-f icon"></i> </a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter icon"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-google-plus-g icon"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center col-md-4 col-12 align-self-center">
+          <ul class="footer-pages-links text-md-right text-center d-flex">
+            <li><a href="#">Terms And Conditions  </a></li>
+            <li><a href="#">| Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+  </footer>
+  
+</body>
+
+</html>
