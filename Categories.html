@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>MK Recipes | Share Your Recipes with Love</title>
+  <!-- own css link -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet"  href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/add-recipe.css" />
+  
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    
+    <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+
+    <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+  
+    <!-- bootstrap 5 javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"
+    defer></script>
+
+    <!-- font awsome js -->
+
+  <script src="https://kit.fontawesome.com/a38fa16313.js" crossorigin="anonymous" defer></script>
+
+  <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
+  
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  
+  <!-- own javascript links -->
+  <script src="js/jquery.magnific-popup.js" defer></script>
+  <script src="js/add-recipe.js" defer></script>
+  <script src="js/magnific.js" defer></script>
+  
+
+</head>
+
+<body>
+  <header>
+    <nav
+      class="text-color navbar navbar-expand-lg bg-light d-flex justify-content-between  shadow-sm p-3 bg-body rounded">
+      <div class="d-flex justify-content-center">
+        <div class="d-flex">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample "
+            aria-controls="offcanvasExample" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="ms-1">
+            <a href="index.html"><img class="logo img-fluid navbar-brand" src="images/logo.png" /></a>
+          </div>
+        </div>
+        <!-- logo end  -->
+
+        <!-- menu bar starts -->
+
+        <div class="d-flex justify-content-between ">
+          <div>
+            <div class="offcanvas  offcanvas-start  d-flex justify-content-center" tabindex="-1" id="offcanvasExample"
+              aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                  Menu bar
+                </h5>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body fs-5 text-color">
+
+                <ul class="navbar-nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="add-recipe.html">Add Recipe</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Recipes
+                    </a>
+                    <ul class="dropdown-menu fs-6">
+                      <li><a class="dropdown-item" href="#">Soup</a></li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Salad</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Fast Food</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Fish</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Pizza</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Deserts</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Baked Food</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="Categories.html">All Recipes</a>
+                      </li>
+                    </ul>
+
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Cuisine
+                    </a>
+                    <ul class="dropdown-menu fs-6">
+                      <li><a class="dropdown-item" href="#">Soup</a></li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Salad</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Fast Food</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Fish</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Pizza</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Deserts</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="cuisines.html">All Cuisine</a>
+                      </li>
+                    </ul>
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">Contact us</a>
+                  </li>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="position-absolute bottom-0 end-0 me-2">
+        <div>
+          <img data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-5 img-fluid"
+            src="images/search-icon.png" />
+        </div>
+
+        <!-- login and sign uplink -->
+        <div class=" d-flex fs-6 fw-bold "><a class="nav-link me-2 "
+          href="login.html">Login</a> | <a class=" ms-2  btn-register" href="register.html">Register</a> </div>
+      </div>
+      </div>
+
+
+    </nav>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-light">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Search Bar
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-light">
+            <form class=" active d-flex mt-3 mt-lg-0" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end  -->
+
+
+  <div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Categories</h2>
+            </div>
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Categories</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Categories -->
+
+<div class="container ">
+  <div class="col-12 text-center mb-4 mt-4">
+    <h3>Categories</h3>
+  </div>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gx-5 g-3">
+
+    <!-- 1st category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/salat.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center"><a href="">Salat</a></h4>
+            <hr class="hr-divider" />
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- 2nd category  -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- 3rd category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- 4th category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- 5th category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- 6th category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- 7th category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- 8th category   -->
+    <div class="col-md-4">
+      <div class="fav-recipe-grid">
+        <div class="recipe-img "><img src="images/Category-image/dessert.jpg" alt=""></div>
+        <div class="recipe-content d-flex flex-column">
+          <div class="mt-auto">
+            <h4 class="fs-1 d-flex justify-content-center "><a href="">Dessert</a></h4>
+            <hr class="hr-divider" />
+            
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
