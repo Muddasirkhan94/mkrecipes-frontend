@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MKRecipes.com Dashboard</title>
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+
+    
+    
+    <!--css bootstrap 5.2.0 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!--css bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    
+    
+    
+    <!-- Data Tables Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    
+    
+    <!-- include summernote css -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+
+    <!-- add recipe css  -->
+    <link rel="stylesheet" href="../css/add-recipe.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    
+    <!--  ---------   Css end here -->
+
+    <!-- data table Ajax -->
+    <script type="text/javascript" charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+
+    <!-- Data table jquery -->
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- data table javascript -->
+    <script defer type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script defer type="text/javascript"
+        src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+        
+        <!-- bootstrap 5.2.0 -->
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        
+        <!-- bootstrap 5.0.2 javascript -->
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- alphine js for recipe post js templete ingredients etc -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  
+  
+
+  <!-- Summernote JS - CDN Link -->
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+  
+  
+ 
+
+    <!-- custom js files -->
+    <script defer src="../js/data-table.js"></script>
+
+    <script defer src="../js/add-recipe.js" ></script>
+    <script  src="../js/add-ingredients.js" ></script>
+    <!-- sommer note custom js -->
+    <script defer src="../js/summer-note.js"></script>
+    
+
+
+
+</head>
+
+<body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-color navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+            </button>
+            <a class="navbar-brand me-auto ms-lg-auto ms-3 text-uppercase fw-bold" href="#">MKRecipes.com</a>
+
+            <div>
+
+                <p class="d-flex ms-auto my-3 my-lg-0">Hi, Admin</p>
+            </div>
+
+
+        </div>
+        </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <!-- nav sidebar -->
+    <div class="offcanvas offcanvas-start sidebar-nav  border  border-0" tabindex="-1" id="sidebar">
+        <div class="offcanvas-body p-0 text-color">
+            <nav class="bg-color ">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="small fw-bold text-uppercase px-5 ">
+                            Site Admin
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <a class="nav-link sidebar-link px-3 active" href="index.html">
+                            <span class="me-2"><i class="bi bi-house"></i></span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a class="nav-link px-3 sidebar-link active" data-bs-toggle="collapse" href="#layouts">
+                            <span class="me-2 "><i class="bi bi-folder-plus"></i></span>
+                            <span>All Recipes</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="all-recipes.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-list-task"></i></span>
+                                        <span>Recipe List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="category.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-box"></i></span>
+                                        <span>Category</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="recipe-cuisine.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-flower1"></i></span>
+                                        <span>Cuisine</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="nutrition.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-info-circle"></i></span>
+                                        <span>Nutrition</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="nutrition-unit.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-thermometer-half"></i></span>
+                                        <span>Nutrition Unit</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="comments.html" class="nav-link px-3 sidebar-link ">
+                            <span class="me-2"><i class="bi bi-megaphone"></i></span>
+                            <span>Comments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reviews.html" class="nav-link px-3 sidebar-link ">
+                            <span class="me-2"><i class="bi bi-star"></i></span>
+                            <span>Reviews</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages.html" class="nav-link px-3 sidebar-link ">
+                            <span class="me-2"><i class="bi bi-book"></i></span>
+                            <span>Pages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="locations.html" class="nav-link px-3 sidebar-link ">
+                            <span class="me-2"><i class="bi bi-geo-alt"></i></span>
+                            <span>Locations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html" class="nav-link px-3 sidebar-link ">
+                            <span class="me-2"><i class="bi bi-people"></i></span>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html" class="nav-link px-3 sidebar-link ">
+                            <span class="me-2"><i class="bi bi-person-lines-fill"></i></span>
+                            <span>Contact Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link " data-bs-toggle="collapse" href="#layouts1">
+                            <span class="me-2 "><i class="bi bi-gear"></i></span>
+                            <span>Settings</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="layouts1">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="gen-settings.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-gear-wide-connected"></i></span>
+                                        <span>Gen. Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile-settings.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-person"></i></span>
+                                        <span>Profile Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-links.html" class="nav-link px-1">
+                                        <span class="me-2"><i class="bi bi-card-list"></i></span>
+                                        <span>Social Links</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+
+                    <li>
+                        <a href="logout.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-box-arrow-right"></i></span>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <!-- header with sidebar ends  here -->
+
+
+
+    <main class="mt-3 pt-3">
+
+        <!-- ++++++++++++++++++++++ -->
+        <!-- page header starts here -->
+        <!-- ++++++++++++++++++++++++++ -->
+        <div class="container-fluid ">
+            <div class=" shadow-sm p-2 mb-5 bg-body rounded">
+                <div class="row ">
+                    <div class="col-sm-6 d-flex justify-content-start">
+
+                        <h3 class="mt-3">All Recipes</h3>
+                        
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <ol
+                            class="breadcrumb m-0  m-sm-3 m-lg-3 d-flex justify-content-start justify-content-sm-end  justify-content-md-end justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">All Recipes</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Recipe</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- page header ends -->
+
+               <!-- add recipe form -->
+        <div class="container-fluid">
+            <div class=" shadow-sm p-2 mb-5 bg-body rounded">
+                <form method="POST" action="">
+                    <h3 class="mt-3 ">Recipe Details</h3>
+                    <div class="row">
+                      <div class="col-md-4 col-12">
+                        <div class="form-group mb-4">
+                          <label>Recipe Name <small class="text-danger">*</small></label>
+                          <input type="text" class="form-control" name="recipe" placeholder="Enter Recipe Name">
+                        </div>
+              
+                      </div>
+              
+                      <div class="col-md-4 col-12">
+                        <div class="form-group mb-4">
+                          <label>Pre Time(Mintues)<small class="text-danger">*</small></label>
+                          <input type="number" class="form-control" name="pre_time" placeholder="Enter Recipe Pre Time">
+                        </div>
+                      </div>
+              
+              
+                      <div class="col-md-4 col-12">
+                        <div class="form-group mb-4">
+                          <label>Cook Time(Mintues)<small class="text-danger">*</small></label>
+                          <input type="number" class="form-control" name="cook_time" placeholder="Enter Recipe Cook Time">
+                        </div>
+                      </div>
+              
+                      <div class="col-md-4 col-12 mb-4">
+                        <label>Category <small class="text-danger">*</small></label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Select the Category</option>
+                          <option value="1">Salat</option>
+                          <option value="2">Fish</option>
+                          <option value="3">Pizza</option>
+                        </select>
+                      </div>
+              
+                      <div class="col-md-4 col-12 mb-4">
+                        <label>Cuisine <small class="text-danger">*</small></label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Select the Cuisine Name</option>
+                          <option value="1">Pakistan</option>
+                          <option value="2">Turkish</option>
+                          <option value="3">Indian</option>
+                        </select>
+                      </div>
+              
+                      <div class="col-md-4 col-12">
+                        <div class="form-group mb-4">
+                          <label>Total Serving <small class="text-danger">*</small></label>
+                          <input type="number" class="form-control" name="serving" placeholder="Enter Total Servings">
+                        </div>
+                      </div>
+              
+                      <div class="col-md-4 col-12">
+                        <div id="selectedBanner"></div>
+                        <div class="form-group">
+                          <label for="pwd">Recipe Thumnail Image:</label>
+                          <input type="file" class="form-control" name="image" id="img" />
+                        </div>
+              
+                      </div>
+              
+              
+                      <div class="col-md-4 col-12">
+                        <label>Difficulty <small class="text-danger">*</small></label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Select Difficulty</option>
+                          <option value="1">Easy</option>
+                          <option value="2">Medium</option>
+                          <option value="3">Hard</option>
+                        </select>
+                      </div>
+              
+              
+                      <div class="col-md-4 col-12">
+                        <div class="form-group mb-4">
+                          <label>Video </label>
+                          <input type="text" name="youtube_video_id" class="form-control video_item" placeholder="YouTube Video ID">
+                        </div>
+                      </div>
+              
+              
+                    </div>
+              
+                    <div class="row">
+                      <div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Recipe Gallery<small class="text-danger">*</small></label>
+                            <div data-image-uploader data-image-uploader-file-type-regex="(\.jpg|\.jpeg|\.png)$"
+                              data-image-uploader-max-file-size="8" class="form__field form__load-img">
+                              <p class="form__title">Upload your Recipe images (Maximum 4 images)</p>
+                              <div class="load__img-wrap">
+                                <div class="load__img-content" data-image-uploader-drop-area>
+                                  <div class="content__wrapper" data-image-uploader-content>
+                                    <button type="button" class="btn btn-primary">Upload File</button>
+                                    <span>/</span>
+                                    <svg viewBox="0 0 17 17" width="17" height="17" fill="none">
+                                      <path
+                                        d="M14.917 7.611H11.25v5.333h-5.5V7.611H2.083L8.5.5l6.417 7.111Zm-13.75 7.111h14.666V16.5H1.167v-1.778Z"
+                                        fill="#767676" />
+                                    </svg>
+                                    <p>Drag your files here</p>
+                                    <div class="upload__TipIcon">
+                                      <span>
+                                        <svg viewBox="0 0 17 17" width="17" height="17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#a)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M8.5 1.955a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09ZM.5 8.5a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm8-3.636c.402 0 .727.325.727.727V8.5a.727.727 0 0 1-1.454 0V5.59c0-.4.325-.726.727-.726Zm0 5.818a.727.727 0 0 0 0 1.454h.007a.727.727 0 0 0 0-1.454H8.5Z"
+                                              fill="#767676" />
+                                          </g>
+                                          <defs>
+                                            <clipPath id="a">
+                                              <path fill="#fff" transform="translate(.5 .5)" d="M0 0h16v16H0z" />
+                                            </clipPath>
+                                          </defs>
+                                        </svg>
+                                      </span>
+                                      <div class="upload__Tooltip">
+                                        <ul>
+                                          <li>- Images must be in JPG, JPEG and PNG format.</li>
+                                          <li>- File size must be 10 MB or less.</li>
+                                          <li>- Maximum 3 images.</li>
+                                          <li>- Image must be at least 100 pixels tall.</li>
+                                          <li>- Image must be at least 100 pixels wide.</li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <input type="file" enctype="multipart/form-data" accept=".png, .jpg, .jpeg" multiple
+                                    style="display: none;">
+                                </div>
+                              </div>
+                              <ul class="validation-summary-errors error__msg margin--top-16 hidden" id="errorMessage"
+                                data-image-uploader-errors>
+                                <li>* Images must be in JPG, JPEG and PNG format.</li>
+                                <li>* File size must be 10 MB or less.</li>
+                                <li>* Maximum 3 images.</li>
+                                <li>* Image must be at least 100 pixels tall.</li>
+                                <li>* Image must be at least 100 pixels wide.</li>
+                              </ul>
+                              <div class="upload__thumbnails hidden" data-thumbnails-container>
+                                <div>
+                                  <div>
+                                    <span>Uploaded files</span>
+                                    <div class="imgs__wrapper">
+                                      <div class="item__imgs" data-image-preview-container>
+                                        <template data-image-preview>
+                                          <div class="item__wrapper" data-image-preview-element>
+                                            <div class="remove__img">
+                                              <button class="remove__icon" data-removal-button>
+                                                <svg viewBox="0 0 12 12" width="12" height="12" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                    d="M12 1.2 10.8 0 6 4.8 1.2 0 0 1.2 4.8 6 0 10.8 1.2 12 6 7.2l4.8 4.8 1.2-1.2L7.2 6 12 1.2Z"
+                                                    fill="#4B4B4B" />
+                                                </svg>
+                                              </button>
+                                            </div>
+                                            <div class="review__img">
+                                              <picture>
+                                                <img style="max-width: 200px; min-width: 200px; min-width: 200px; max-width: 200px" />
+                                              </picture>
+                                            </div>
+                                          </div>
+                                        </template>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!--gallery image ends-->
+              
+                      <div class="col-md-12 col-12">
+                        <div class="form-group mb-4">
+                          <label>Description <small class="text-danger">*</small></label>
+                          <textarea name="description" id="your_summernote" class="form-control" rows="10"></textarea>
+                          
+                        </div>
+                      </div> <!-- Descript ends here -->
+              
+                      <!-- add ingredients -->
+                      <div class="row" x-data="handler()">
+                        <div class="col">
+                          <table class="table table-bordered align-items-center table-sm">
+                            <h6>Add Ingredients</h6>
+                            <thead class="thead-light">
+                              <tr>
+                                <th>#</th>
+                                <th>Ingredient Name</th>
+                                <th>Value</th>
+                                <th>Unit Name</th>
+                                <th>Remove</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <template x-for="(field, index) in fields" :key="index">
+                                <tr>
+                                  <td x-text="index + 1"></td>
+                                  <td><input x-model="field.txt1" type="text" name="txt1[]" class="form-control">
+                                  </td>
+                                  <td><input x-model="field.txt2" type="number" name="txt2[]" class="form-control"></td>
+                                  <td>
+                                    <select x-model="field.txt3" name="txt3[]" class="form-select"
+                                      aria-label="Default select example">
+                                      <option selected>Select Unit</option>
+                                      <option value="1">gram</option>
+                                      <option value="2">kilo</option>
+                                      <option value="3">kcal</option>
+                                    </select>
+                                  </td>
+              
+                                  <td><button type="button" class="btn btn-danger btn-small"
+                                      @click="removeField(index)">&times;</button></td>
+                                </tr>
+                              </template>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="4" class="text-left"><button type="button" class="btn btn-primary"
+                                    @click="addNewField()">+ Add Ingredients</button></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+              
+                      <!-- add cooking steps -->
+                      <div class="row mt-3" x-data="handler()">
+                        <div class="col">
+                          <table class="table table-bordered align-items-center table-sm">
+                            <h6>Cooking Steps</h6>
+                            <thead class="thead-light">
+                              <tr>
+                                <th>#</th>
+                                <th>Cooking Step</th>
+                                <th>Remove</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <template x-for="(field, index) in fields" :key="index">
+                                <tr>
+                                  <td x-text="index + 1"></td>
+                                  <td>
+                                    <textarea x-model="field.txt1" name="txt1[]" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </td>
+                                  
+              
+                                  <td><button type="button" class="btn btn-danger btn-small"
+                                      @click="removeField(index)">&times;</button></td>
+                                </tr>
+                              </template>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="4" class="text-left"><button type="button" class="btn btn-primary"
+                                    @click="addNewField()">+ Add Cooking Step</button></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div> 
+              
+                      <!-- add Nutrition-->
+                      <div class="row mt-3" x-data="handler()">
+                        <div class="col">
+                          <table class="table table-bordered align-items-center table-sm">
+                            <h6>Add Nutrition</h6>
+                            <thead class="thead-light">
+                              <tr>
+                                <th>#</th>
+                                <th>Nutrition Name</th>
+                                <th>Value</th>
+                                <th>Unit Name</th>
+                                <th>Remove</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <template x-for="(field, index) in fields" :key="index">
+                                <tr>
+                                  <td x-text="index + 1"></td>
+                                  <td>
+                                    <select x-model="field.txt1" name="txt1[]" class="form-select"
+                                      aria-label="Default select example">
+                                      <option selected>Select Nutrition</option>
+                                      <option value="1">Fat</option>
+                                      <option value="2">Protein</option>
+                                      <option value="3">Carbo</option>
+                                    </select>
+                                  </td>
+                                  <td><input x-model="field.txt2" type="number" name="txt2[]" class="form-control"></td>
+                                  <td>
+                                    <select x-model="field.txt3" name="txt3[]" class="form-select"
+                                      aria-label="Default select example">
+                                      <option selected>Select Unit</option>
+                                      <option value="1">gram</option>
+                                      <option value="2">kilo</option>
+                                      <option value="3">kcal</option>
+                                    </select>
+                                  </td>
+              
+                                  <td><button type="button" class="btn btn-danger btn-small"
+                                      @click="removeField(index)">&times;</button></td>
+                                </tr>
+                              </template>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="4" class="text-left"><button type="button" class="btn btn-primary"
+                                    @click="addNewField()">+ Add Nutrition</button></td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+              
+                    </div>
+              
+                    <!-- submit button -->
+                    
+                    <div class="row">
+                      <div class="col-12">
+                          <button type="submit" class="btn btn-primary mt-3 mb-3">Submit</button>
+                      </div>
+                  </div>
+                    
+              
+              
+              
+              
+                  </form>
+            </div>
+        </div>
+        
+
+        
+
+        <!-- add recipe content ends -->
+
+
+    </main>
+    
+    
+        
+    </body>
+
+    </html>
